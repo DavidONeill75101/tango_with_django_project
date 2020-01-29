@@ -29,13 +29,13 @@ def index(request):
 	# We make use of the shortcut function to make our lives easier.
 	# Note that the first parameter is the template we wish to use.
 	return render(request, 'rango/index.html', context=context_dict)
+	
 
 def about(request):
     
 	context_dict = {'boldmessage': 'This tutorial has been put together by David.'}
 
 	return render(request, 'rango/about.html', context=context_dict)
-
 
 
 def show_category(request, category_name_slug):
@@ -56,6 +56,7 @@ def show_category(request, category_name_slug):
 		context_dict['pages'] = None
 
 	return render(request, 'rango/category.html', context=context_dict)
+
 
 def add_category(request):
 	form = CategoryForm()
